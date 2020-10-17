@@ -103,7 +103,7 @@ $ yarn install
 $ yarn start
 ```
 
-## :memo: License
+## :memo: Licença
 
 Este projeto está sob a [licença do MIT](https://github.com/jonathanpauluze/happy/blob/main/LICENSE).
 
