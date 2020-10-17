@@ -94,7 +94,7 @@ $ yarn dev
 
 ```bash
 # Acesse a pasta do frontend
-$ cd happy/frontend
+$ cd happy/web
 
 # Instale as dependências
 $ yarn install
