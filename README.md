@@ -103,8 +103,53 @@ $ yarn install
 $ yarn start
 ```
 
+### Instale as dependências do mobile e rode o projeto
+
+```bash
+# Acesse a pasta do frontend
+$ cd happy/mobile
+
+# Instale as dependências
+$ yarn install
+
+# Rode o projeto
+$ yarn start
+
+# Abrirá o Expo no navegador, basca selecionar LAN e escanear o QR code com o app do Expo
+```
+
+#### Ajustes para aplicação rodar no mobile
+
+Na pasta `backend` será necessário alterar o caminho da url das imagens de `localhost` para o IP da sua máquina (mostrado na aplicação do Expo que abre no navegador). Exemplo:
+
+<p align="center">
+    <img alt="NextLevelWeek" title="Seu IP" src="./.github/expo-ip.png" width="250px" />
+</p>
+
+```ts
+// happy/backend/src/views/images_view.ts
+
+...
+render(image: Image) {
+  return {
+    id: image.id,
+    url: `http://192.168.15.6:3333/uploads/${image.path}`,
+  }
+},
+...
+```
+
+Caso ocorra o erro "network response timed out" talvez seja necessário permitir o uso da porta do Expo. No Linux basta executar:
+```bash
+sudo ufw allow 19000/tcp
+sudo ufw allow 19001/tcp
+# Caso seu dispositivo utilize outra porta, permita a conexão com o mesmo comando
+```
+
+A resolução de outros erros podem ser encontradas [aqui](https://github.com/Rocketseat/expo-common-issues).
+
 ## :memo: Licença
 
 Este projeto está sob a [licença do MIT](https://github.com/jonathanpauluze/happy/blob/main/LICENSE).
 
-Feito com ♥ por Jonathan Pauluze
+Feito com ♥ por Jonathan Pauluzes
