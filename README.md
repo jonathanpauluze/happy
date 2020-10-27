@@ -141,8 +141,8 @@ render(image: Image) {
 
 Caso ocorra o erro "network response timed out" talvez seja necessário permitir o uso da porta do Expo. No Linux basta executar:
 ```bash
-sudo ufw allow 19000/tcp
-sudo ufw allow 19001/tcp
+$ sudo ufw allow 19000/tcp
+$ sudo ufw allow 19001/tcp
 # Caso seu dispositivo utilize outra porta, permita a conexão com o mesmo comando
 ```
 
